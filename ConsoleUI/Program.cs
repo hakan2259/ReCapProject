@@ -9,6 +9,71 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            //CarTest();
+
+            CarManager carManager = new CarManager(new EfCarDal());
+
+            //Console.WriteLine(carManager.GetById(1).Description);
+
+            //CarInsert(carManager);
+
+            //CarUpdate(carManager);
+
+            //CarDelete(carManager);
+
+            foreach (var car in carManager.GetCarDetails())
+            {
+                Console.WriteLine(car.CarName + "/" + car.BrandName + "/" + car.ColorName + "/" + car.DailyPrice);
+            }
+        }
+
+        private static void CarDelete(CarManager carManager)
+        {
+            carManager.Delete(new Car
+            {
+                Id = 3002
+            });
+
+            foreach (var car in carManager.GetAll())
+            {
+                Console.WriteLine(car.Id + " / " + car.Description);
+            }
+        }
+
+        private static void CarUpdate(CarManager carManager)
+        {
+            carManager.Update(new Car
+            {
+                Id = 1,
+                BrandId = 1,
+                ColorId = 1,
+                DailyPrice = 325
+            });
+            foreach (var car in carManager.GetAll())
+            {
+                Console.WriteLine(car.Id + " / " + car.DailyPrice);
+            }
+        }
+
+        private static void CarInsert(CarManager carManager)
+        {
+            carManager.Add(new Car
+            {
+                BrandId = 4,
+                ColorId = 1,
+                DailyPrice = 800,
+                ModelYear = 2020,
+                Description = "218i Gran Coupe First Edition Sport Line"
+            });
+
+            foreach (var car in carManager.GetAll())
+            {
+                Console.WriteLine(car.Description);
+            }
+        }
+
+        private static void CarTest()
+        {
             CarManager carManager = new CarManager(new EfCarDal());
 
             /*carManager.Add(new Car

@@ -67,3 +67,5 @@ C:\Users\hakan22\ReCapProject\ConsoleUI\obj\Debug\net5.0\ConsoleUI.dll
 C:\Users\hakan22\ReCapProject\ConsoleUI\obj\Debug\net5.0\ref\ConsoleUI.dll
 C:\Users\hakan22\ReCapProject\ConsoleUI\obj\Debug\net5.0\ConsoleUI.pdb
 C:\Users\hakan22\ReCapProject\ConsoleUI\obj\Debug\net5.0\ConsoleUI.genruntimeconfig.cache
+C:\Users\hakan22\ReCapProject\ConsoleUI\bin\Debug\net5.0\Core.dll
+C:\Users\hakan22\ReCapProject\ConsoleUI\bin\Debug\net5.0\Core.pdb
